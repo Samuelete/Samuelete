@@ -2,8 +2,9 @@ body {
     background-color: #FFFFFF;
     color:#404040;
     font-family: 'Georgia', Garamond, sans-serif;
-    width: 1024px;
+    max-width: 1024px;
     font-size: 11pt;
+    margin: auto;
 }
 h1 { 
     background-color: #F0F0F0;
