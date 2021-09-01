@@ -23,14 +23,14 @@ h2 {
     font-weight: bold;
     font-size: 12pt;
 }
-#ul1 {
+.ul1 {
     list-style: none;
     padding-left: 0;
 }
-#ul2 {
-    padding-left: 0;
+.strike {
+    text-decoration: line-through;
 }
-#ul3 {
+.ul3 {
     list-style: none;
     padding: 5px;
     margin: 30px;
