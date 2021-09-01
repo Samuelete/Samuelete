@@ -1,0 +1,12 @@
+body {
+    background-image: url("background.png");
+}
+div.title {
+    background-image: url("bannerbg.png");
+}
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow: 3px 3px#999999; 
+}
