@@ -29,10 +29,12 @@ a:active{
     color: white;
 }
 
-.margin{
+.margin {
+    margin-left:150px;  
+}
 
-    margin-left:150px;
-    
+#style-bold {
+    font-weight: bold;
 }
 
 #lifted {

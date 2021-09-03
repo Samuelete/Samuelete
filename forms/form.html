@@ -14,8 +14,8 @@
                 <li><label ><span id="lifted">New User Signup: </span></label></li>
                 <li><label for="name" >Name:</label><input type="text" id="name" name="name" size="16" maxlength="16" required/></li>
                 <li><label >Gender:</label>
-                    <input type="radio" name="Male" value="Male" />Male
-                    <input type="radio" name="Female" value="Female" />Female
+                    <input type="radio" name="Male" value="Male" /><span id="style-bold">Male</span>
+                    <input type="radio" name="Female" value="Female" /><span id="style-bold">Female</span>
                 </li>
                 <li><label >Age:</label><input type="text" name="Age" size="6" pattern="{2}" title="Two Numbers Only" required /></li>
                 <li><label >Personality type:</label><input type="text" name="p type" size="16" pattern="[A-Z]{4}" required /> 
@@ -27,7 +27,7 @@
                         <option>Linux</option>
                     </select>
                 </li>
-                <li><label >Seeking age:</label><input type="text" name="min" size="6" pattern="{2}" title="Two Numbers Only" value="min" required /> to 
+                <li><label >Seeking age:</label><input type="text" name="min" size="6" pattern="{2}" title="Two Numbers Only" value="min" required /> &nbsp <span id="style-bold">to</span> &nbsp
                     <input type="text" name="max" size="6" value="max" pattern="{2}" title="Two Numbers Only" required /></li>
                 <li><input type="submit" value="Sign Up" /></li>
             </ul>
