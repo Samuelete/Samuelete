@@ -17,7 +17,7 @@
                     <input type="radio" name="Male" value="Male" /><span id="style-bold">Male</span>
                     <input type="radio" name="Female" value="Female" /><span id="style-bold">Female</span>
                 </li>
-                <li><label >Age:</label><input type="text" name="Age" size="6" pattern="{2}" title="Two Numbers Only" required /></li>
+                <li><label >Age:</label><input type="text" name="Age" size="6" pattern="[0-9]{2}" title="Two Numbers Only" required /></li>
                 <li><label >Personality type:</label><input type="text" name="p type" size="16" pattern="[A-Z]{4}" required /> 
                     (<a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp" title="Personality type website">Don't know your type?</a>)</li>
                 <li><label >Favorite OS:</label>
@@ -27,8 +27,8 @@
                         <option>Linux</option>
                     </select>
                 </li>
-                <li><label >Seeking age:</label><input type="text" name="min" size="6" pattern="{2}" title="Two Numbers Only" value="min" required /> &nbsp <span id="style-bold">to</span> &nbsp
-                    <input type="text" name="max" size="6" value="max" pattern="{2}" title="Two Numbers Only" required /></li>
+                <li><label >Seeking age:</label><input type="text" name="min" size="6" pattern="[0-9]{2}" title="Two Numbers Only" value="min" required /> &nbsp <span id="style-bold">to</span> &nbsp
+                    <input type="text" name="max" size="6" value="max" pattern="[0-9]{2}" title="Two Numbers Only" required /></li>
                 <li><input type="submit" value="Sign Up" /></li>
             </ul>
         </form>
