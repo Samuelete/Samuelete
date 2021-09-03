@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <title>Retrieve Grade</title>
+</head>
+<body>
+    <div id="container">
+        <form action="http://mumstudents.org/params.php">
+        <fieldset class="content-box">
+            <legend class="content-box">Rerieve you Grade</legend>
+            <input type="text" name="Name" /> Name: <br />
+            <input type="text" name="Student ID" value="ID" /> Student ID: <br /><br />
+            Assignment:
+            <select name="Assignment">
+                <option selected>Assingment 1</option>
+                <option>Assingment 2</option>
+                <option>Assingment 3</option>
+                <option>Assingment 4</option>
+                <option>Assingment 5</option>
+                <option>Assingment 6</option>
+                <option>Assingment 7</option>
+            </select> <br /><br />
+            Entry:
+            <input type="radio" name="cc" value="June" /> June
+            <input type="radio" name="cc" value="July" /> July
+            <input type="radio" name="cc" value="August" /> August <br /><br />
+            Are you lying?:
+            <input type="checkbox" name="Yes" /> Yes
+            <input type="checkbox" name="No" checked /> No <br /><br />
+            <input type="submit" />
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
