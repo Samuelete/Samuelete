@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Buggy Page #2</title>
+		<script src="buggy2.js" type="text/javascript"></script> <!-- Bug Double bug in this line, explanation below -->
+	</head>
+    <!-- It had a bug after "text/javascript" it should not be "/". 
+        Also </script> Was not there I had to added it-->
+	<body>
+		<div>
+			<button onclick="gogogo();">Click Me!!1</button> 
+            <!-- Bug the line before on the word onclick. 
+                In the letter l it has the number 1 instead the letter l-->
+		</div>
+	</body>
+</html>
