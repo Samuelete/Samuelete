@@ -1,0 +1,29 @@
+/* Main container */
+#container {
+    background-color: #CCCCFF;
+    font-family: sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+/* Heading h1 */
+h1 {
+    font-size: 32pt;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+}
+/* Text Area */
+textarea {
+    height: 400px;
+    width: 90%;
+    text-align: center;
+    font-size: 12pt;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.fieldgroup {
+    border: 5px solid black;
+    display: inline-block;
+}
