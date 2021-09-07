@@ -9,9 +9,6 @@ window.onload = function() {
 
     //START BUTTON FUNCTIONS
     document.getElementById("start").onclick = function() {
-        start();
-        frames = document.getElementById("ta").value;
-        set(frames.split("=====\n"), 0)
 
         function start() {
             document.getElementById("start").disabled = true;
@@ -23,17 +20,17 @@ window.onload = function() {
             timer = setInterval(function(){ 
                 document.getElementById("ta").value = framing[index];
                 index++;
-                if (index === framing.length) index = 0;
+                if (index === framing.length) { index = 0; }
             }, speed);
         }
-
+        frames = document.getElementById("ta").value;
+        start();
+        set(frames.split("=====\n"), 0)
 
     }
 
     //STOP BUTTON FUNCTIONS
     document.getElementById("stop").onclick = function() {
-        stop();
-        document.getElementById("ta").value = frames;
 
         function stop() {
             document.getElementById("start").disabled = false;
@@ -42,6 +39,8 @@ window.onload = function() {
             clearInterval(timer);
             timer = null;
         }
+        document.getElementById("ta").value = frames;
+        stop();
     }
 
     //ANIMATION ON TEXT AREA
