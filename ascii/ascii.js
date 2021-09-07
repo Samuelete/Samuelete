@@ -23,7 +23,7 @@ window.onload = function() {
             timer = setInterval(function(){ 
                 document.getElementById("ta").value = framing[index];
                 index++;
-                if(index === framing.length) index = 0;
+                if (index === framing.length) index = 0;
             }, speed);
         }
 
