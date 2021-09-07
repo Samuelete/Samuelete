@@ -5,16 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="ascii.css" type="text/css" rel="stylesheet" />
+    <script src="ascii.js" type="text/javascript"></script>
+    <script src="animations.js" type="text/javascript"></script>
     <title>ASCIImation</title>
 </head>
 <body>
-    <div id="containter">
+    <div id="container">
         <div>
             <h1>CS472: ASCII Animation Viewer</h1>
         </div>
-        <div>
+        <div id="block-area">
             <textarea name="texta" id="ta" cols="20" rows="80"></textarea>
+            <ul>
+                <li><fieldset>
+                        <legend>Play Controls:</legend>
+                        <input id="start" type="submit" value="Start">
+                        <input id="stop" type="submit" value="Stop" disabled>
+                    </fieldset>
+                </li>
+                <li><fieldset class="fieldgroup">
+                    <legend>Animation:</legend>
+                    <select name="animation-box" id="a-box">
+                        <option name="blank" id="ba" value="Blank" selected="selected">Blank</option>
+                        <option name="exercise" id="ex" value="Exercise">Exercise</option>
+                        <option name="juggler" id="ju" value="Juggler">Juggler</option>
+                        <option name="bike" id="bi" value="Bike">Bike</option>
+                        <option name="dive" id="di" value="Dive">Dive</option>
+                    </select>
+                </fieldset>
+                </li>
+                <li><fieldset>
+                    <legend>Size:</legend>
+                    <select name="size-box" id="s-box">
+                        <option name="tiny" id="ti" value="7pt">Tiny</option>
+                        <option name="small" id="sm" value="10pt">Small</option>
+                        <option name="medium" id="me" value="12pt" selected="selected">Medium</option>
+                        <option name="large" id="la" value="16pt">Large</option>
+                        <option name="extra-large" id="ex-la" value="24pt">Extra Large</option>
+                        <option name="xxl" id="xxl" value="32pt">XXL</option>
+                    </select>
+                </fieldset>
+                </li>
+                <li>
+                    <fieldset>
+                        <legend>Speed:</legend>
+                        <input id="turbo" type="checkbox">Turbo
+                    </fieldset>
+                </li>
+            </ul>
         </div>
-    </div>
+        <div id="validators">
+            <a href="http://validator.w3.org/check?uri=https://samuelete.github.io/Samuelete/pie.html">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png"
+                    alt="validator HTML" />
+            </a><br>
+            <a href="http://validator.w3.org/check?uri=https://samuelete.github.io/Samuelete/recipe.css">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png"
+                    alt="validator CSS" />
+            </a><br>
+            <a href="https://codebeautify.org/jsvalidate?url=https://samuelete.github.io/Samuelete/recipe.css">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://mumstudents.org/cs472/2014-09/images/w3c-js.png"
+                    alt="validator JS" />
+            </a>
+        </div>
+    </div>    
 </body>
 </html>

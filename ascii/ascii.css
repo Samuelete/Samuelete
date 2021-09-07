@@ -17,13 +17,33 @@ h1 {
 textarea {
     height: 400px;
     width: 90%;
-    text-align: center;
+    text-align: left;
     font-size: 12pt;
     font-family: monospace;
     font-weight: bold;
+    margin-left: 5%;
 }
 
-.fieldgroup {
-    border: 5px solid black;
-    display: inline-block;
+/* Text Area Block */
+#block-area {
+    margin-bottom: 0%;
+}
+
+fieldset {
+    border-color: black;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    margin-left: 15%;
+    margin-top: 0%;
+}
+
+li {
+   display: inline-block;
+}
+
+#validators {
+    margin-left: 83%;
 }
