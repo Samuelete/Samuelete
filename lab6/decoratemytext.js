@@ -6,16 +6,16 @@ window.onload = function() {
 var bigButton = document.getElementById("bigbutton");
 bigButton.onclick = function() {
 //    document.getElementById("textarea").style.fontSize = "24pt";
-   // Exercise of page 7
+//    Exercise of page 7
        if (timer === null) {
            timer = setInterval(() => { 
-               newSize = parseInt(getComputedStyle(document.getElementById("texta")).fontSize);
-               console.log(newSize);
-               newSize = newSize + 2;
-               console.log(newSize);
-               document.getElementById("texta").style.fontSize = newSize + "pt";}, 500);
-               console.log(parseInt(getComputedStyle(document.getElementById("texta")).fontSize));
-
+               if (newSize == null) {
+                    newSize = parseFloat(getComputedStyle(document.getElementById("texta")).fontSize); 
+                    newSize *= 0.75;
+                }
+               newSize += 2;
+               document.getElementById("texta").style.fontSize = newSize + "pt";
+               console.log("After Udated " + document.getElementById("texta").style.fontSize);}, 500);
        } else {
           clearInterval(timer);
           timer = null;
