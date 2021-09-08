@@ -30,14 +30,102 @@
 // }
 // console.log(product(45,60));
 
-const maximum = (x,y,z) => {
-		if(x > y && x > z) {
-			return x;
-		} else if (y > x && y > z) {
-			return y; 
-		} else {
-			return z;
-		}
-}
+// const maximum = (x,y,z) => {
+// 		if(x > y && x > z) {
+// 			return x;
+// 		} else if (y > x && y > z) {
+// 			return y; 
+// 		} else {
+// 			return z;
+// 		}
+// }
 
-console.log(maximum(100,5000,1000));
+// console.log(maximum(100,5000,1000));
+
+
+// var count = {
+// 	add = (function () {     
+// 		var counter = 0; 
+// 		return function () { 
+// 			  return console.log(counter += 1);
+// 			  } 
+// 		}
+// 	)(),
+// 	reset = (function () {     
+// 			var counter = 0; 
+// 			return function () { 
+// 				  return console.log(counter = 0);
+// 				  } 
+// 			}
+// 	)()   
+// };
+
+// var count = {};
+// count.add = (function () {     
+// 	var counter = 0; 
+// 	return function () { 
+// 		  return console.log(counter += 1);
+// 		  } 
+// 	}
+// )();
+// count
+// count.reset = (function () {     
+// 	var counter = 0; 
+// 	return function () { 
+// 		  return console.log(counter = 0);
+// 		  } 
+// 	}
+// )();
+
+// count.add();
+// count.add();
+// count.add();
+// count.add();
+// count.reset();
+// count.add();
+// count.add();
+
+// Lab 9, Exercise 6
+// var count = (function () {     
+// 	var counter = 0; 
+// 	let count = {
+// 		add: function() {
+// 			console.log(counter += 1);
+// 		},
+// 		reset: function() {
+// 			console.log(counter = 0);	  
+// 		}};
+// 	return count;
+// })(); 
+
+// count.add();
+// count.add();
+// count.add();
+// count.add();
+// count.reset();
+// count.add();
+// count.add();
+
+//Lab 9, exercise 8
+
+var make_adder = (function(x) {
+	var sum = x;
+	var count = 0;
+	return function() {
+		if(count == 0) {
+			count++;
+			return console.log(sum);
+		} else {
+			return console.log(sum += sum);
+		}
+	}
+})();
+
+var add5 = make_adder(5);
+
+add5();
+add5();
+add5();
+
+
+

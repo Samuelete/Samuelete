@@ -2,11 +2,11 @@
 
 
 window.onload = function() {
-    var listAccount = [];
-    var createAccount = function() {
-        // var listAccount = [];
 
-        function addAccount(name, deposit) {
+    var createAccount = (function() {
+        var listAccount = [];
+
+        let addAccount = function(name, deposit) {
             let text = "";
             listAccount.push(new Account(name, deposit))
             listAccount.forEach(acc => text += "Account Name: " + 
@@ -18,9 +18,9 @@ window.onload = function() {
                 add: function(name, deposit) {
                     addAccount(name, deposit);
                 }
-        }
+        };
 
-    };
+    })();
 
     const Account = function(name, deposit) {
         this.name = name;
@@ -28,7 +28,7 @@ window.onload = function() {
     }
 
     document.getElementById("submit").onclick = function() {
-        createAccount().add(
+        createAccount.add(
             document.getElementById("name").value,
             document.getElementById("deposit").value);
             document.getElementById("name").value = "";
