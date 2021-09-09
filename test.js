@@ -199,12 +199,7 @@ Employee.setAddress = function(newAddress) {
 }
 Employee.getAddress = function() {
 	return this.address;
-<<<<<<< HEAD
-
-	
-	dsdfsdfsdfsdfsdf
-=======
 }
 
 //TESTING GITHUB IN BOTH LAPTOPS
->>>>>>> de51003349f94fbdea9ae4e7b63ab5a03b3d2a7b
+//TESTING AGAIN OLD PC
