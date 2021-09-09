@@ -200,11 +200,3 @@ Employee.setAddress = function(newAddress) {
 Employee.getAddress = function() {
 	return this.address;
 }
-
-//Lab 10, Exercise 14
-
-const promise = new Promise((resolve, reject) => { 
-	reject("Hattori"); 
-});  
-promise.then(val => alert("Success: " + val)) 
-	  .catch(e => alert("Error: " + e)); 
