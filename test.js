@@ -106,26 +106,105 @@
 // count.add();
 // count.add();
 
-//Lab 9, exercise 8
+//Lab 9, Exercise 8
 
-var make_adder = (function(x) {
-	var sum = x;
-	var count = 0;
+var mark_adder = (function(inc) {
+	var counter = 0;
 	return function() {
-		if(count == 0) {
-			count++;
-			return console.log(sum);
-		} else {
-			return console.log(sum += sum);
-		}
-	}
+		return counter += inc;
+	};
 })();
 
-var add5 = make_adder(5);
 
-add5();
-add5();
-add5();
+//Lab 10, Exercise 10
 
+var Employee = (function() {
+	var name;
+	var age;
+	var salary;
+	let getAge = function() {
+		return age;
+	}
+	let getSalary = function() {
+		return salary;
+	}
+	let getName = function() {
+		return name;
+	}
+	let setAge = function(newAge) {
+		age = newAge;
+	}
+	let setName = function(newName) {
+		name = newName;
+	}
+	let setSalary = function(newSalary) {
+		salary = newSalary;
+	}
+	let increaseSalary = function(percentage) {
+		setSalary((getSalary() * (percentage / 100)));
+	}
+	let incrementAge = function(index) {
+		setAge(getAge() + index);
+	}
+	return {
+		setAge: setAge,
+		setSalary: setSalary,
+		setName: setName,
+		increaseSalary: increaseSalary,
+		incrementAge: incrementAge
+	};
+})();
 
+//Lab 10, Exercise 12
 
+var Employee = (function() {
+	var name;
+	var age;
+	var salary;
+
+	var employee = {};
+
+	employee.setAge = function(newAge) {
+		age = newAge;
+	};
+	employee.setSalary = function(newSalary) {
+		salary = newSalary;
+	};
+	employee.setName = function(newName) {
+		name = newName;
+	};
+	employee.increaseSalary = function(percentage) {
+		setSalary((getSalary() * (percentage / 100)));
+	};
+	employee.incrementAge = function(index) {
+		setAge(getAge() + index);
+	};
+	let getAge = function() {
+		return age;
+	}
+	let getSalary = function() {
+		return salary;
+	}
+	let getName = function() {
+		return name;
+	}
+	return { employee };
+})();
+
+//Lab 10, Exercise 13
+
+Employee.address = 'Grand Vile Avenue';
+Employee.setAddress = function(newAddress) {
+	this.address = newAddress;
+}
+Employee.getAddress = function() {
+	return this.address;
+}
+
+//Lab 10, Exercise 14
+
+const promise = new Promise((resolve, reject) => { 
+	reject("Hattori"); 
+});  
+promise.then(val => alert("Success: " + val)) 
+	  .catch(e => alert("Error: " + e)); 
