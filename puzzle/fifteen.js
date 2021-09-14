@@ -69,7 +69,7 @@ $(function(){
             top: "300px"
         };
         if(boolean == true) {
-            actions();
+            actions(); 
             boolean = false;
         }
         //var shuffled = shuffleArray( $("#puzzlearea").children('div'));
@@ -94,34 +94,52 @@ $(function(){
     var actions = function() {
 
          $("#puzzlearea").children('div').each(function () {
-        $(this).click(function () {
-            if(emptySquare.left == $(this).css("left") && 
-            (Math.abs(parseInt(emptySquare.top) - parseInt($(this).css("top")))
-            == 100)){
-                changeSquare($(this));
-             }
-             if(emptySquare.top == $(this).css("top") && 
-            (Math.abs(parseInt(emptySquare.left) - parseInt($(this).css("left")))
-            == 100)){
-                changeSquare($(this));
-             }
+            $(this).click(function () {
+
+                if(leftBoolean($(this)) == true) {
+                        changeSquare($(this));
+                }
+                if(rightBoolean($(this)) == true) {
+                        changeSquare($(this));
+                 }
             });
         });
 
         $("#puzzlearea").children('div').each(function () {
-         $(this).hover(function () {
-           if(emptySquare.left == $(this).css("left") && 
-           (Math.abs(parseInt(emptySquare.top) - parseInt($(this).css("top")))
-            == 100)){$(this).addClass("movablepiece");}
-           if(emptySquare.top == $(this).css("top") && 
-           (Math.abs(parseInt(emptySquare.left) - parseInt($(this).css("left")))
-           == 100)){$(this).addClass("movablepiece");}
-           },
-           function () {
-           $(this).removeClass("movablepiece");
-        });
+            $(this).hover(function () {
+                if(leftBoolean($(this)) == true) {
+                    $(this).addClass("movablepiece");
+                }
+                if(rightBoolean($(this)) == true) {
+                    $(this).addClass("movablepiece");
+                }
+            },
+            function () {
+            $(this).removeClass("movablepiece");
+            });
         });
     };
+
+
+    var leftBoolean = function(div) {
+        if(emptySquare.top == div.css("top") && 
+        (Math.abs(parseInt(emptySquare.left) - parseInt(div.css("left")))
+        == 100)) {
+             return true;
+         } else {
+             return false;
+         }
+    }
+
+    var rightBoolean = function(div) {
+        if(emptySquare.left == div.css("left") && 
+        (Math.abs(parseInt(emptySquare.top) - parseInt(div.css("top")))
+         == 100)) {
+             return true;
+         } else {
+             return false;
+         }
+    }
 
      var changeSquare = function (div) {
         const id = emptySquare.id;
@@ -173,3 +191,43 @@ $(function(){
     //     }); 
 
     // }
+
+//     var actions = function() {
+
+//         $("#puzzlearea").children('div').each(function () {
+//                $(this).click(function () {
+//            // if(emptySquare.left == $(this).css("left") && 
+//            // (Math.abs(parseInt(emptySquare.top) - parseInt($(this).css("top")))
+//            // == 100)){
+//                    if(leftBoolean($(this)) == true) {
+//                        changeSquare($(this));
+//                    }
+//            //  if(emptySquare.top == $(this).css("top") && 
+//            // (Math.abs(parseInt(emptySquare.left) - parseInt($(this).css("left")))
+//            // == 100)){
+//                    if(rightBoolean($(this)) == true) {
+//                        changeSquare($(this));
+//                    }
+//                });
+//        });
+
+//        $("#puzzlearea").children('div').each(function () {
+//         $(this).hover(function () {
+//        //    if(emptySquare.left == $(this).css("left") && 
+//        //    (Math.abs(parseInt(emptySquare.top) - parseInt($(this).css("top")))
+//        //     == 100)){$(this).addClass("movablepiece");}
+//            if(leftBoolean($(this)) == true) {
+//                $(this).addClass("movablepiece");
+//            }
+//        //    if(emptySquare.top == $(this).css("top") && 
+//        //    (Math.abs(parseInt(emptySquare.left) - parseInt($(this).css("left")))
+//        //    == 100)){$(this).addClass("movablepiece");}
+//            if(rightBoolean($(this)) == true) {
+//                $(this).addClass("movablepiece");
+//            }
+//           },
+//           function () {
+//           $(this).removeClass("movablepiece");
+//        });
+//        });
+//    };
