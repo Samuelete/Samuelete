@@ -8,7 +8,7 @@ $(function(){
         top: "300px"
     };
     var temp = [];
-
+    var boolean = true;
     init = function() {
         var puzzleArea = document.getElementById('puzzlearea');
         var divs = puzzleArea.getElementsByTagName("div");
@@ -68,6 +68,10 @@ $(function(){
             left: "300px",
             top: "300px"
         };
+        if(boolean == true) {
+            actions();
+            boolean = false;
+        }
         //var shuffled = shuffleArray( $("#puzzlearea").children('div'));
         $("#puzzlearea").children('div').each(function () {$(this).detach();});
         //$("#puzzlearea").appendChild()
@@ -86,8 +90,10 @@ $(function(){
         }
         //APPEND ANOTHER EMPTY PIECE
     };
+   
+    var actions = function() {
 
-    $("#puzzlearea").children('div').each(function () {
+         $("#puzzlearea").children('div').each(function () {
         $(this).click(function () {
             if(emptySquare.left == $(this).css("left") && 
             (Math.abs(parseInt(emptySquare.top) - parseInt($(this).css("top")))
@@ -100,7 +106,22 @@ $(function(){
                 changeSquare($(this));
              }
             });
-     });
+        });
+
+        $("#puzzlearea").children('div').each(function () {
+         $(this).hover(function () {
+           if(emptySquare.left == $(this).css("left") && 
+           (Math.abs(parseInt(emptySquare.top) - parseInt($(this).css("top")))
+            == 100)){$(this).addClass("movablepiece");}
+           if(emptySquare.top == $(this).css("top") && 
+           (Math.abs(parseInt(emptySquare.left) - parseInt($(this).css("left")))
+           == 100)){$(this).addClass("movablepiece");}
+           },
+           function () {
+           $(this).removeClass("movablepiece");
+        });
+        });
+    };
 
      var changeSquare = function (div) {
         const id = emptySquare.id;
@@ -113,20 +134,6 @@ $(function(){
         div.css("left", left);
         div.css("top", top);
      }
-
-    $("#puzzlearea").children('div').each(function () {
-         $(this).hover(function () {
-            if(emptySquare.left == $(this).css("left") && 
-            (Math.abs(parseInt(emptySquare.top) - parseInt($(this).css("top")))
-             == 100)){$(this).addClass("movablepiece");}
-            if(emptySquare.top == $(this).css("top") && 
-            (Math.abs(parseInt(emptySquare.left) - parseInt($(this).css("left")))
-            == 100)){$(this).addClass("movablepiece");}
-            },
-            function () {
-            $(this).removeClass("movablepiece");
-        });
-    });
 
     $(document).ready(function() {
         init();
