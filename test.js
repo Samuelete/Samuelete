@@ -108,88 +108,88 @@
 
 //Lab 9, Exercise 8
 
-var mark_adder = (function(inc) {
-	var counter = 0;
-	return function() {
-		return counter += inc;
-	};
-})();
+// var mark_adder = (function(inc) {
+// 	var counter = 0;
+// 	return function() {
+// 		return counter += inc;
+// 	};
+// })();
 
 
 //Lab 10, Exercise 10
 
-var Employee = (function() {
-	var name;
-	var age;
-	var salary;
-	let getAge = function() {
-		return age;
-	}
-	let getSalary = function() {
-		return salary;
-	}
-	let getName = function() {
-		return name;
-	}
-	let setAge = function(newAge) {
-		age = newAge;
-	}
-	let setName = function(newName) {
-		name = newName;
-	}
-	let setSalary = function(newSalary) {
-		salary = newSalary;
-	}
-	let increaseSalary = function(percentage) {
-		setSalary((getSalary() * (percentage / 100)));
-	}
-	let incrementAge = function(index) {
-		setAge(getAge() + index);
-	}
-	return {
-		setAge: setAge,
-		setSalary: setSalary,
-		setName: setName,
-		increaseSalary: increaseSalary,
-		incrementAge: incrementAge
-	};
-})();
+// var Employee = (function() {
+// 	var name;
+// 	var age;
+// 	var salary;
+// 	let getAge = function() {
+// 		return age;
+// 	}
+// 	let getSalary = function() {
+// 		return salary;
+// 	}
+// 	let getName = function() {
+// 		return name;
+// 	}
+// 	let setAge = function(newAge) {
+// 		age = newAge;
+// 	}
+// 	let setName = function(newName) {
+// 		name = newName;
+// 	}
+// 	let setSalary = function(newSalary) {
+// 		salary = newSalary;
+// 	}
+// 	let increaseSalary = function(percentage) {
+// 		setSalary((getSalary() * (percentage / 100)));
+// 	}
+// 	let incrementAge = function(index) {
+// 		setAge(getAge() + index);
+// 	}
+// 	return {
+// 		setAge: setAge,
+// 		setSalary: setSalary,
+// 		setName: setName,
+// 		increaseSalary: increaseSalary,
+// 		incrementAge: incrementAge
+// 	};
+// })();
 
 //Lab 10, Exercise 12
 
-var Employee = (function() {
-	var name;
-	var age;
-	var salary;
+// var Employee = (function() {
+// 	var name;
+// 	var age;
+// 	var salary;
 
-	var employee = {};
+// 	var employee = {};
 
-	employee.setAge = function(newAge) {
-		age = newAge;
-	};
-	employee.setSalary = function(newSalary) {
-		salary = newSalary;
-	};
-	employee.setName = function(newName) {
-		name = newName;
-	};
-	employee.increaseSalary = function(percentage) {
-		setSalary((getSalary() * (percentage / 100)));
-	};
-	employee.incrementAge = function(index) {
-		setAge(getAge() + index);
-	};
-	let getAge = function() {
-		return age;
-	}
-	let getSalary = function() {
-		return salary;
-	}
-	let getName = function() {
-		return name;
-	}
-	return { employee };
-})();
+// 	employee.setAge = function(newAge) {
+// 		age = newAge;
+// 	};
+// 	employee.setSalary = function(newSalary) {
+// 		salary = newSalary;
+// 	};
+// 	employee.setName = function(newName) {
+// 		name = newName;
+// 	};
+// 	employee.increaseSalary = function(percentage) {
+// 		setSalary((getSalary() * (percentage / 100)));
+// 	};
+// 	employee.incrementAge = function(index) {
+// 		setAge(getAge() + index);
+// 	};
+// 	let getAge = function() {
+// 		return age;
+// 	}
+// 	let getSalary = function() {
+// 		return salary;
+// 	}
+// 	let getName = function() {
+// 		return name;
+// 	}
+// 	return { employee };
+// })();
 
 //Lab 10, Exercise 13
 
@@ -204,3 +204,4 @@ Employee.getAddress = function() {
 //TESTING GITHUB IN BOTH LAPTOPS
 //TESTING AGAIN OLD PC
 //LAST TESTING
+
