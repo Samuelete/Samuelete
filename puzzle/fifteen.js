@@ -72,10 +72,9 @@ $(function(){
             actions(); 
             boolean = false;
         }
-        //var shuffled = shuffleArray( $("#puzzlearea").children('div'));
-        $("#puzzlearea").children('div').each(function () {$(this).detach();});
-        //$("#puzzlearea").appendChild()
 
+        $("#puzzlearea").children('div').each(function () {$(this).detach();});
+        
         var posshuff = shuffleArray(temp);
         for (var i=0; i< divs.length; i++) {
             var div = divs[i];
