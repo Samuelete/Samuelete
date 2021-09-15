@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="test.js" type="text/javascript"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div>no ul here </div> 
-    <div> 
-        This does contain a ul. 
-        <ul> 
-            <li>the first item</li> 
-            <li>the second item</li> 
-        </ul> 
-    </div> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script> 
-    $(document).ready(function(){
-      $("div").each(function(){
-          if($(this).find("ul").length > 0) {
-             $(this).css("color", "blue");
-          }
-        });
+<!doctype html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<title>text demo</title> 
+<style> 
+p { color: blue; margin: 8px; 
+} 
+span { color: red; } 
+</style> 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+</head> 
+<body> 
+<p><span>Test</span> Paragraph.</p> 
+<p></p> 
+
+<script> 
+ $("document").ready(function(){
+        var content =  $("p:first").text();
+        $("p:last").text(content).css({"color": "black"});
     });
-    </script> 
-    <!-- <script>
-        $(document).ready(function(){
-            $("body").append("<div><h1>JQuery Core</h1></div>");
-        });
-    </script> -->
-</body>
-</html>
-    
+</script> 
+<p><span>Test</span> Paragraph.</p> 
+
+</body> 
+</html> 
+
+
